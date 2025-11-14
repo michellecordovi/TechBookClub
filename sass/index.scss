@@ -18,20 +18,42 @@ $lightest-orange: #fff5ef;
 $text-gradient: linear-gradient(107deg, #ff9a60 -11.37%, #062630 61.84%);
 $background-gradient: linear-gradient(90deg, #ffe2d1 0%, #fff5ef 100%);
 
+//button extension
+%button{
+    width: fit-content;
+    max-width: 100%;
+    height:fit-content;
+    padding: 20px 24px;
+    font-family: $header-font;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: $lightest-orange;
+    border: $black solid 2px;
+    border-radius:8px;
+    display: inline-block;
+}
+
+
+
 * {
 	box-sizing: border-box;
 	padding: 0px;
 	margin: 0px;
+    color: $black;
 }
 
 h1,h2,h3,h4{
     font-family: $header-font;
+    font-weight: 600;
 }
 
 
 p{
     font-family: $body-font;
+    font-size: 20px;
 }
+
+
 
 header {
 	min-height: 834px;
@@ -57,13 +79,18 @@ header {
 		}
 
 		.text-box {
-            align-self: center;
+            height: 100%;
+
 			h1 {
 				font-size: 62px;
                 color: transparent;
 				background: $text-gradient;
 				background-clip: text;
 			}
+
+            a{
+                @extend %button;
+            }
 		}
 	}
 }
