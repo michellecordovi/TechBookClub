@@ -1,12 +1,64 @@
+//VARIABLES
+
+//font variables
+$header-font: 'Martian Mono', Georgia, 'Times New Roman', Times, serif;
+$body-font: Inter, Arial, sans-serif;
+
+//color variables
+$black: #062630;
+$blue: #385159;
+$dark-gray: #e6e1df;
+$light-gray: #faf5f3;
+$white: #fff;
+$orange: #fea36f;
+$light-orange: #ffe2d1;
+$lightest-orange: #fff5ef;
+
+//gradient-variables
+$text-gradient: linear-gradient(107deg, #ff9a60 -11.37%, #062630 61.84%);
+$background-gradient: linear-gradient(90deg, #ffe2d1 0%, #fff5ef 100%);
+
 * {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
 }
 
-header{
-    h1{
-        color: blue;
-        font-size: 24px;
-    }
+h1,h2,h3,h4{
+    font-family: $header-font;
+}
+
+p{
+    font-family: $body-font;
+}
+
+header {
+	height: 834px;
+	background-image: url("./assets/images/pattern-light-bg.svg");
+	background-color: $lightest-orange;
+
+	#hero {
+		padding: 80px 135px;
+        height: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+        column-gap: 64px;
+        justify-items: stretch;
+        align-items: stretch;
+        
+
+		img {
+			width: 100%;
+            object-fit: cover;
+		}
+
+		.text-box {
+            align-self: center;
+			h1 {
+				color: transparent;
+				background: $text-gradient;
+				background-clip: text;
+			}
+		}
+	}
 }

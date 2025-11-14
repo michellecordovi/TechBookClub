@@ -4,9 +4,39 @@
   margin: 0px;
 }
 
-header h1 {
-  color: blue;
-  font-size: 10px;
+h1, h2, h3, h4 {
+  font-family: "Martian Mono", Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  font-family: Inter, Arial, sans-serif;
+}
+
+header {
+  height: 834px;
+  background-image: url("./assets/images/pattern-light-bg.svg");
+  background-color: #fff5ef;
+}
+header #hero {
+  padding: 80px 135px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 64px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+header #hero img {
+  width: 100%;
+  object-fit: cover;
+}
+header #hero .text-box {
+  align-self: center;
+}
+header #hero .text-box h1 {
+  color: transparent;
+  background: linear-gradient(107deg, #ff9a60 -11.37%, #062630 61.84%);
+  background-clip: text;
 }
 
 /*# sourceMappingURL=index.css.map */
